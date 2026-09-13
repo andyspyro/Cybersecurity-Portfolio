@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Andy Stein portfolio covering cybersecurity, security engineering, HR data analytics, VBA automation, Hack The Box, application security, Python, SQL, Kotlin, and Android projects." />
+
+  <title>Andy Stein | Cybersecurity, IT & Data Analytics Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <div id="header">
+    <div class="container">
+      <nav>
+        <h1 class="logo">Andy Stein<span>.</span></h1>
+
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Focus</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button class="close-btn" type="button" onclick="closemenu()">×</button>
+          </li>
+        </ul>
+
+        <button class="menu-btn" type="button" onclick="openmenu()">☰</button>
+      </nav>
+
+      <div class="header-text">
+        <p>Cybersecurity | Security Engineering | HR Data Analytics</p>
+
+        <h1>
+          Hi, I am <span>Andy Stein</span><br />
+          Security, Automation, and Data Projects
+        </h1>
+
+        <p class="hero-description">
+          I build HR data and automation tools, secure software projects, application security labs, threat models, and authorized Hack The Box writeups.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#portfolio" class="hero-btn">View My Work</a>
+          <a href="#contact" class="hero-btn outline">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <div class="profile-card">
+            <img src="Profile pic.PNG" alt="Photo of Andy Stein" class="profile-photo" />
+
+            <h2>Andy Stein</h2>
+            <p>Data Analytics • IT • Cybersecurity</p>
+          </div>
+        </div>
+
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+
+          <p>
+            My day to day work is HR data analytics and automation. Outside of that work, I am finishing a master's degree in cybersecurity and building projects around secure software, application security, threat modeling, Python automation, Hack The Box, SQL, Kotlin, and Android.
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+            <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+            <p class="tab-links" onclick="opentab('education', event)">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li>
+                <span>Excel VBA</span><br />
+                Automated trackers, reports, buttons, and dashboards
+              </li>
+              <li>
+                <span>Power BI</span><br />
+                Leadership dashboards and trend reporting
+              </li>
+              <li>
+                <span>Python, SQL & Kotlin</span><br />
+                Automation, database work, security projects, and Android development
+              </li>
+              <li>
+                <span>Cybersecurity & IT</span><br />
+                Hack The Box, Burp Suite, Linux, Windows, networking, AppSec, secure coding, SQL injection, CSRF, and threat modeling
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span>HR Data Analyst</span><br />
+                Recruitment analytics, vacancy tracking, and dashboard reporting
+              </li>
+              <li>
+                <span>Automation Builder</span><br />
+                Created tools to reduce manual tracking and improve data accuracy
+              </li>
+              <li>
+                <span>Process Improvement</span><br />
+                Built cleaner workflows for hiring pipeline visibility
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li>
+                <span>Master’s in Cybersecurity | NC A&T State University</span><br />
+                Expected completion in 2027
+              </li>
+              <li>
+                <span>Bachelor’s in Management</span><br />
+                Graduated in 2020
+              </li>
+              <li>
+                <span>Minor in Psychology</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">What I Work On</h1>
+
+      <div class="services-list">
+        <div>
+          <h2>HR Data & VBA</h2>
+          <p>
+            Hiring and vacancy analytics, Power BI, Excel VBA, reconciliation,
+            workflow tracking, data quality checks, and recurring reporting.
+          </p>
+          <a href="#portfolio">View projects</a>
+        </div>
+
+        <div>
+          <h2>Security Engineering</h2>
+          <p>
+            Secure software, threat modeling, architecture review, access control,
+            logging, database design, and Python automation.
+          </p>
+          <a href="#portfolio">View projects</a>
+        </div>
+
+        <div>
+          <h2>Application & Offensive Security</h2>
+          <p>
+            WebGoat, Juice Shop, Burp Suite, static analysis, Hack The Box,
+            enumeration, exploitation, remediation, and retesting.
+          </p>
+          <a href="#portfolio">View projects</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio -->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+
+      <div class="work-list">
+        <div class="work">
+          <div class="work-placeholder">Secure App</div>
+          <div class="layer">
+            <h3>Secure Lo Fi Study Cafe</h3>
+            <p>
+              Full stack Node.js and Express application with SQLite, Socket.IO,
+              authentication, RBAC, CSRF checks, rate limits, and audit logging.
+            </p>
+            <a href="https://github.com/andyspyro/Security-engineering-projects/tree/main/secure-lofi-study-cafe" target="_blank" rel="noopener noreferrer">View</a>
+          </div>
+        </div>
+
+        <div class="work">
+          <div class="work-placeholder">HTB</div>
+          <div class="layer">
+            <h3>Paperwork</h3>
+            <p>
+              Completed Hack The Box path from source review and command injection
+              to user access and root, with the defensive fixes documented.
+            </p>
+            <a href="https://github.com/andyspyro/Offensive-Security-labs/tree/main/paperwork" target="_blank" rel="noopener noreferrer">View</a>
+          </div>
+        </div>
+
+        <div class="work">
+          <div class="work-placeholder">AppSec</div>
+          <div class="layer">
+            <h3>OWASP Juice Shop</h3>
+            <p>
+              Semgrep, SonarQube Cloud, SQL injection testing, TypeScript source
+              review, bound query remediation, rebuilding, and retesting.
+            </p>
+            <a href="https://github.com/andyspyro/Application-security-labs/tree/main/juice-shop" target="_blank" rel="noopener noreferrer">View</a>
+          </div>
+        </div>
+
+        <div class="work">
+          <div class="work-placeholder">HR Data</div>
+          <div class="layer">
+            <h3>HR Analytics & VBA Automation</h3>
+            <p>
+              Hiring and vacancy reporting, Power BI, Excel VBA, reconciliation,
+              workflow tracking, dashboard logic, and recurring audit controls.
+            </p>
+            <a href="https://github.com/andyspyro/Security-engineering-projects/tree/main/workforce-analytics-automation" target="_blank" rel="noopener noreferrer">View</a>
+          </div>
+        </div>
+
+        <div class="work">
+          <div class="work-placeholder">Python</div>
+          <div class="layer">
+            <h3>Nova Local Assistant</h3>
+            <p>
+              Python automation with local model integration, system diagnostics,
+              Windows controls, research workflows, voice, and local tooling.
+            </p>
+            <a href="https://github.com/andyspyro/Security-engineering-projects/tree/main/nova-local-assistant" target="_blank" rel="noopener noreferrer">View</a>
+          </div>
+        </div>
+
+        <div class="work">
+          <div class="work-placeholder">Threat Model</div>
+          <div class="layer">
+            <h3>Online Banking Security Architecture</h3>
+            <p>
+              IriusRisk, data flow diagrams, STRIDE, trust boundaries,
+              threat review, security requirements, and mitigation planning.
+            </p>
+            <a href="https://github.com/andyspyro/Security-engineering-projects/tree/main/online-banking-threat-model" target="_blank" rel="noopener noreferrer">View</a>
+          </div>
+        </div>
+
+        <div class="work">
+          <div class="work-placeholder">Android</div>
+          <div class="layer">
+            <h3>Reply Time Tracker</h3>
+            <p>
+              Native Android work with Kotlin, Jetpack Compose, Material 3,
+              state, date and time validation, lists, and a live timer.
+            </p>
+            <a href="https://github.com/andyspyro/Security-engineering-projects/tree/main/android-mobile-prototypes" target="_blank" rel="noopener noreferrer">View</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://github.com/andyspyro?tab=repositories" class="btn" target="_blank" rel="noopener noreferrer">See More</a>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div id="contact">
+    <div class="container">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact</h1>
+        <p>
+          The best place to see my current work is GitHub.
+        </p>
+        <p>
+          <a href="https://github.com/andyspyro" target="_blank" rel="noopener noreferrer">
+            github.com/andyspyro
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright © 2026 Andy Stein. Built with HTML, CSS, and JavaScript.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

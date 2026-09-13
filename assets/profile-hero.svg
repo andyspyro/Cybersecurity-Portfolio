@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc">
+  <title id="title">Andy Stein cybersecurity and data analytics profile banner</title>
+  <desc id="desc">Animated terminal-style banner highlighting security engineering, application security, offensive security, HR analytics, automation, Python, VBA, and SQL.</desc>
+
+  <defs>
+    <linearGradient id="topLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="34%" stop-color="#3fb950"/>
+      <stop offset="67%" stop-color="#a371f7"/>
+      <stop offset="100%" stop-color="#f0883e"/>
+    </linearGradient>
+
+    <linearGradient id="panelGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101820"/>
+      <stop offset="55%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="998" height="298" rx="18" fill="url(#panelGlow)" stroke="#30363d" stroke-width="2"/>
+  <rect x="2" y="2" width="996" height="6" rx="3" fill="url(#topLine)">
+    <animate attributeName="opacity" values="0.65;1;0.65" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <circle cx="28" cy="29" r="6" fill="#ff7b72"/>
+  <circle cx="48" cy="29" r="6" fill="#d29922"/>
+  <circle cx="68" cy="29" r="6" fill="#3fb950"/>
+
+  <text x="28" y="70" font-family="monospace" font-size="18" fill="#8b949e">andyspyro@github:~$</text>
+  <text x="238" y="70" font-family="monospace" font-size="18" fill="#f0f6fc">whoami</text>
+  <rect x="307" y="54" width="10" height="20" rx="1" fill="#58a6ff" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="28" y="120" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f0f6fc">Andy Stein</text>
+  <text x="28" y="153" font-family="Arial, sans-serif" font-size="18" fill="#9da7b3">Cybersecurity M.S. Candidate  |  Security Engineering  |  HR &amp; Data Analytics</text>
+
+  <g transform="translate(28 181)">
+    <rect x="0" y="0" width="222" height="38" rx="19" fill="#0d1117" stroke="#58a6ff" stroke-width="2"/>
+    <text x="111" y="24" text-anchor="middle" font-family="monospace" font-size="13" font-weight="700" fill="#79c0ff">SECURITY ENGINEERING</text>
+
+    <rect x="236" y="0" width="166" height="38" rx="19" fill="#0d1117" stroke="#3fb950" stroke-width="2"/>
+    <text x="319" y="24" text-anchor="middle" font-family="monospace" font-size="13" font-weight="700" fill="#7ee787">APPLICATION SECURITY</text>
+
+    <rect x="416" y="0" width="194" height="38" rx="19" fill="#0d1117" stroke="#a371f7" stroke-width="2"/>
+    <text x="513" y="24" text-anchor="middle" font-family="monospace" font-size="13" font-weight="700" fill="#d2a8ff">OFFENSIVE + HTB</text>
+
+    <rect x="624" y="0" width="192" height="38" rx="19" fill="#0d1117" stroke="#f0883e" stroke-width="2"/>
+    <text x="720" y="24" text-anchor="middle" font-family="monospace" font-size="13" font-weight="700" fill="#ffa657">HR DATA + VBA</text>
+  </g>
+
+  <circle cx="34" cy="251" r="5" fill="#3fb950" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <text x="50" y="256" font-family="monospace" font-size="14" fill="#8b949e">focus:</text>
+
+  <text x="104" y="256" font-family="monospace" font-size="14" fill="#79c0ff" opacity="1">
+    secure software + threat modeling
+    <animate attributeName="opacity" values="1;1;0;0;0;0;1" keyTimes="0;0.24;0.30;0.94;0.95;0.99;1" dur="9s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="104" y="256" font-family="monospace" font-size="14" fill="#d2a8ff" opacity="0">
+    Hack The Box + authorized offensive labs
+    <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;0.30;0.34;0.58;0.64;0.99;1" dur="9s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="104" y="256" font-family="monospace" font-size="14" fill="#ffa657" opacity="0">
+    Python + TypeScript + SQL + VBA automation
+    <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.58;0.63;0.64;0.68;0.94;1" dur="9s" repeatCount="indefinite"/>
+  </text>
+
+  <rect x="-170" y="10" width="90" height="270" fill="#58a6ff" opacity="0.025" transform="skewX(-14)">
+    <animate attributeName="x" from="-170" to="1150" dur="6s" repeatCount="indefinite"/>
+  </rect>
+</svg>
