@@ -110,7 +110,7 @@ The embedded profile establishes the presence of an **Apple-authored Display P3 
 
 It does **not**, by itself, prove that an iPhone captured the photograph. ICC profiles describe color interpretation and can survive or be introduced during processing, conversion, export, or transmission. They are also shared across devices and are not unique sensor identifiers.
 
-A suspected iPhone 15 origin was therefore treated as a **hypothesis**, not a conclusion.
+A suspected **iPhone 15** origin was therefore recorded as a working hypothesis rather than presented as a proven conclusion.
 
 ## 3. JPEG Encoding Characteristics
 
@@ -260,14 +260,7 @@ Green: 8.832
 Red:   8.832
 ```
 
-The similar channel values showed that the residual extraction was functioning, but the residual contains a mixture of:
-
-- sensor noise
-- JPEG compression artifacts
-- image sharpening
-- denoising
-- fine scene detail
-- resizing/transmission artifacts
+The similar channel values showed that the residual extraction was functioning, but the residual contains a mixture of sensor noise, JPEG compression artifacts, image sharpening, denoising, fine scene detail, and resizing/transmission artifacts.
 
 ### PRNU Lesson
 
@@ -275,15 +268,13 @@ A single residual image is **not** a camera fingerprint lookup.
 
 Photo Response Non-Uniformity (PRNU) becomes substantially more useful when multiple known original photographs from a candidate physical camera are available. Residuals from those reference photographs can be combined into a sensor fingerprint and compared against the questioned image.
 
-Because no candidate physical phone and no reference originals were available, PRNU could not responsibly identify the originating device in this investigation.
+Because no candidate physical phone and no reference originals were available during the blind examination, PRNU could not responsibly identify the originating device.
 
-## 11. Testing an iPhone 15 Hypothesis
+## 11. iPhone 15 Attribution Hypothesis
 
-The presence of the Apple Display P3 profile made an Apple-associated workflow a reasonable avenue to investigate. An iPhone 15 was considered as a possible source.
+During the blind analysis, I developed an **iPhone 15 capture hypothesis**. The hypothesis was based on the Apple-associated provenance artifact and the broader characteristics of the derivative, while recognizing that none of these artifacts was individually device-specific.
 
-The evidence was handled conservatively:
-
-| Artifact | Interpretation |
+| Artifact | Interpretation during blind analysis |
 |---|---|
 | Apple Display P3 ICC profile | Consistent with Apple-associated processing |
 | Near-4:3 aspect ratio | Compatible with smartphone photography but nonspecific |
@@ -295,19 +286,46 @@ The evidence was handled conservatively:
 | Original GPS/time | Not present |
 | Device-specific PRNU reference | Not available |
 
-### Conclusion on Device Attribution
+The forensic evidence therefore supported investigating Apple/iPhone provenance, but the derivative JPEG alone did not contain enough device-specific information to prove the exact model.
 
-The surviving artifacts do not establish that the photograph was captured by an iPhone 15.
+## 12. Ground-Truth Validation — The iPhone 15 Hypothesis Was Correct
 
-The file is **compatible with** an Apple-associated imaging/processing workflow, but compatibility is not attribution. A non-Apple capture could theoretically acquire the same color profile during later processing.
+**After the forensic examination and iPhone 15 hypothesis had already been formed, I obtained independent confirmation from the source that the photograph was in fact captured with an iPhone 15.**
 
-Stronger attribution would require one of the following:
+This was an important validation point in the exercise:
 
-1. an earlier/original-generation copy retaining camera EXIF;
-2. controlled comparison images produced by a known iPhone 15 and passed through the same transmission workflow; or
-3. preferably, multiple original reference photographs from the suspected physical device for sensor-fingerprint comparison.
+```text
+Blind forensic examination
+        ↓
+Apple-associated Display P3 artifact identified
+        ↓
+Original camera EXIF confirmed absent
+        ↓
+iPhone 15 proposed as a working hypothesis
+        ↓
+Analysis stopped short of claiming unsupported proof
+        ↓
+Independent source confirmation obtained
+        ↓
+GROUND TRUTH: iPhone 15
+        ↓
+HYPOTHESIS CONFIRMED
+```
 
-## 12. What I Learned
+### Why This Matters
+
+The result demonstrates the difference between **being correct** and **having enough forensic evidence to claim certainty**.
+
+My iPhone 15 hypothesis ultimately matched the independently confirmed ground truth. However, I deliberately did not report "iPhone 15 proven" before confirmation because the derivative itself lacked the camera make/model and other device-specific identifiers required for that level of attribution.
+
+That distinction is central to defensible digital forensics: an analyst can develop a correct hypothesis from incomplete evidence while still documenting the evidentiary limitations honestly.
+
+The external confirmation therefore does two things:
+
+1. **It validates the investigative hypothesis:** the suspected iPhone 15 origin was correct.
+2. **It validates the reporting methodology:** the analysis appropriately distinguished a supported hypothesis from a proven fact until independent confirmation became available.
+
+## 13. What I Learned
 
 This exercise demonstrated that digital-image forensics is less about finding one magic command and more about combining independent artifacts while understanding what each artifact can and cannot prove.
 
@@ -321,22 +339,26 @@ Key lessons included:
 - **8 × 8 JPEG block artifacts are normal and cannot automatically be treated as evidence of double compression.**
 - **PRNU is comparative.** Device attribution requires reference material from candidate sensors.
 - **A derivative image can destroy provenance information permanently.** Deleted EXIF cannot simply be reconstructed from the remaining pixels.
-- **Forensic reporting must separate observation from inference.** "Apple Display P3 profile present" is an observation; "an iPhone captured the image" would be an unsupported inference without additional evidence.
+- **Forensic reporting must separate observation from inference.** "Apple Display P3 profile present" is an observation; "an iPhone captured the image" required additional evidence.
 - **Negative findings matter.** Establishing that no camera model, GPS, timestamp, hidden payload, or device-specific identifier survives prevents unsupported conclusions.
+- **Ground truth matters.** Independent confirmation can validate an investigative hypothesis without retroactively turning circumstantial artifacts into proof.
+- **My iPhone 15 hypothesis was correct.** The important lesson was reaching that hypothesis while still respecting the limits of the available evidence.
 
 ## Forensic Conclusion
 
 The examined JPEG is a resized/reprocessed derivative containing minimal EXIF metadata, standard high-quality JPEG compression characteristics, a Photoshop-compatible APP13 metadata structure, and an Apple-authored 2022 Display P3 ICC color profile.
 
-No surviving metadata directly identifies the original camera make, model, lens, capture timestamp, exposure settings, or GPS location. No obvious secondary embedded file was identified. Preliminary compression and error-level examination did not establish a localized inconsistency sufficient to demonstrate digital insertion, but these methods cannot authenticate the image or rule out prior modification.
+No surviving metadata directly identified the original camera make, model, lens, capture timestamp, exposure settings, or GPS location. No obvious secondary embedded file was identified. Preliminary compression and error-level examination did not establish a localized inconsistency sufficient to demonstrate digital insertion, but these methods cannot authenticate the image or rule out prior modification.
 
-The Apple ICC profile is a meaningful provenance artifact and supports an Apple-associated color-management or processing stage. It is not sufficient to attribute capture to an iPhone generally or an iPhone 15 specifically.
+During the blind examination, the surviving Apple-associated artifact and image characteristics led me to investigate and record an **iPhone 15 origin as the working device hypothesis**. The derivative alone was insufficient to prove that attribution, so the finding was appropriately reported as a hypothesis.
 
-The investigation therefore demonstrates both practical forensic analysis and an equally important forensic skill: **knowing when the available evidence no longer supports a stronger conclusion.**
+**After the analysis was completed, independent source confirmation established that the original photograph was captured with an iPhone 15. The working hypothesis was therefore correct.**
+
+The project demonstrates both practical forensic analysis and an equally important forensic skill: **forming useful hypotheses from incomplete evidence without overstating what the evidence proves, then validating those hypotheses against independently obtained ground truth.**
 
 ## Skills Demonstrated
 
-`Digital Forensics` · `Image Forensics` · `Metadata Analysis` · `EXIF` · `ICC Profiles` · `JPEG Internals` · `Compression Analysis` · `Error-Level Analysis` · `PRNU Fundamentals` · `OpenCV` · `Python` · `Pillow` · `ExifTool` · `ImageMagick` · `Binwalk` · `Linux` · `WSL` · `Evidence Preservation` · `Cryptographic Hashing` · `Technical Reporting`
+`Digital Forensics` · `Image Forensics` · `Photo Provenance` · `Metadata Analysis` · `EXIF` · `ICC Profiles` · `JPEG Internals` · `Compression Analysis` · `Error-Level Analysis` · `PRNU Fundamentals` · `OpenCV` · `Python` · `Pillow` · `ExifTool` · `ImageMagick` · `Binwalk` · `Linux` · `WSL` · `Evidence Preservation` · `Cryptographic Hashing` · `Hypothesis Testing` · `Ground-Truth Validation` · `Technical Reporting`
 
 ## Ethical Scope
 
