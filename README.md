@@ -33,6 +33,12 @@ Static analysis with Semgrep and SonarQube Cloud, local SQL injection testing, T
 
 [Project page](https://github.com/andyspyro/Application-security-labs/tree/main/juice-shop)
 
+### Digital Image Forensics and Photo Provenance
+
+A hands-on forensic examination of a derivative JPEG using ExifTool, ImageMagick, OpenCV, Pillow, binwalk, jpeginfo, ICC/EXIF analysis, JPEG compression analysis, ELA, noise residuals, PRNU fundamentals, hashing, and evidence-based attribution. The case study documents both technical findings and the limits of identifying an original camera after metadata stripping and recompression.
+
+[Case study](https://github.com/andyspyro/Cybersecurity-Portfolio/tree/main/projects/digital-image-forensics)
+
 ### HR Analytics and VBA Automation
 
 Sanitized professional work covering hiring and vacancy reporting, data quality, cross system reconciliation, workflow tracking, Power BI, Excel automation, and recurring audit logic.
@@ -55,7 +61,7 @@ Kotlin and Jetpack Compose work. The Reply Time Tracker has retained source. I a
 
 | Area | Tools and technologies |
 |---|---|
-| Security | Nmap, Burp Suite, Hack The Box, WebGoat, Juice Shop, Semgrep, SonarQube Cloud, Flawfinder |
+| Security | Nmap, Burp Suite, Hack The Box, WebGoat, Juice Shop, Semgrep, SonarQube Cloud, Flawfinder, ExifTool, ImageMagick, OpenCV, binwalk, jpeginfo |
 | Development | Python, JavaScript, Node.js, TypeScript, SQL, Kotlin, HTML, CSS, EJS |
 | Systems | Windows, Linux, WSL, PowerShell, Bash, SSH, TCP/IP, DNS, DHCP |
 | Data | Power BI, Excel, VBA, Smartsheet, reconciliation, workflow tracking, reporting automation |
