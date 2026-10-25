@@ -33,6 +33,12 @@ Static analysis with Semgrep and SonarQube Cloud, local SQL injection testing, T
 
 [Project page](https://github.com/andyspyro/Application-security-labs/tree/main/juice-shop)
 
+### Web Application Reverse Engineering with REA
+
+Used REA with PowerShell and Chrome DevTools Protocol to inspect browser-delivered JavaScript on a test application and Wikipedia. The recorded Wikipedia analysis parsed 7 scripts, visited 177,115 AST nodes, and reported no parser errors. Documented configuration and routing references, low-confidence endpoint classifications, and the limits of partial static analysis without claiming an exploit or verified network effects.
+
+[Reverse engineering case study](https://github.com/andyspyro/Cybersecurity-Portfolio/tree/main/projects/rea-web-javascript-reverse-engineering)
+
 ### Digital Image Forensics and Photo Provenance
 
 A hands-on forensic examination of a derivative JPEG using ExifTool, ImageMagick, OpenCV, Pillow, binwalk, jpeginfo, ICC/EXIF analysis, JPEG compression analysis, ELA, noise residuals, PRNU fundamentals, hashing, and evidence-based attribution. The case study documents both technical findings and the limits of identifying an original camera after metadata stripping and recompression.
