@@ -7,13 +7,13 @@
 
 ## Research question
 
-**How can YouTube interrupt an existing video, show a mid-roll advertisement, and then restore the video at the correct playback position?** This case study focuses on the client-side player logic, not on bypassing advertisements or accessing YouTube`s private backend.
+**How can YouTube interrupt an existing video, show a mid-roll advertisement, and then restore the video at the correct playback position?** This case study focuses on the client-side player logic, not on bypassing advertisements or accessing YouTube's private backend.
 
 This is a sanitized reconstruction of findings shared from the local Codex/REA report named `youtube-midroll-report.md`. The complete local report and all of its 34 reported source anchors were **not** provided to this repository, so the document below does not claim to reproduce or independently validate all 34 coordinates.
 
 ## Documented product behavior (separate from reverse-engineering evidence)
 
-According to [YouTube`s official mid-roll guide](https://support.google.com/youtube/answer/6175006?hl=en), monetized videos of at least 8 minutes may enable mid-roll ads. Creators can place manual ad *opportunities* or use automatically placed slots, but YouTube determines which opportunities actually receive an ad.
+According to [YouTube's official mid-roll guide](https://support.google.com/youtube/answer/6175006?hl=en), monetized videos of at least 8 minutes may enable mid-roll ads. Creators can place manual ad *opportunities* or use automatically placed slots, but YouTube determines which opportunities actually receive an ad.
 
 The crucial separation is: **an available ad slot is not the same thing as an ad request, and an ad request is not the same thing as an actual interruption.**
 
@@ -70,8 +70,8 @@ The previous browser capture was attach-limited and policy-filtered; some origin
 
 ## What remains unknown
 
-- The private server-side algorithm that chooses *whether* to serve an ad and *which* advertiser`s creative to show.
-- A verified sequence linking a specific viewer`s timed breakpoint to a particular ad request and response.
+- The private server-side algorithm that chooses *whether* to serve an ad and *which* advertiser's creative to show.
+- A verified sequence linking a specific viewer's timed breakpoint to a particular ad request and response.
 - The precise runtime path between mid-roll completion and content resumption in a real observed session.
 - Whether the same source path applies to live streams, continuous content, or server-side-stitched advertisements.
 
@@ -90,6 +90,6 @@ A configured opportunity, an actual server decision, and observable player behav
 
 This work progresses beyond a JavaScript inventory: the AI-assisted REA investigation assembled a bounded client-side **ad-break state-transition model**, identified VOD content-restoration logic and a guarded resume path, and clearly separated those findings from unobserved ad eligibility/ranking and runtime activity.
 
-**Portfolio claim:** *Investigated YouTube`s client-side mid-roll insertion architecture using REA and AI-assisted static JavaScript analysis, tracing timed cue handling, potential prefetch, ad presentation state, exit adapters, and conditional content restoration, while documenting evidence boundaries and unresolved server-side decisions.*
+**Portfolio claim:** *Investigated YouTube's client-side mid-roll insertion architecture using REA and AI-assisted static JavaScript analysis, tracing timed cue handling, potential prefetch, ad presentation state, exit adapters, and conditional content restoration, while documenting evidence boundaries and unresolved server-side decisions.*
 
 **References:** [REA browser observation](https://github.com/morluto/rea/blob/main/docs/browser-observation.md) · [YouTube official mid-roll help](https://support.google.com/youtube/answer/6175006?hl=en)
