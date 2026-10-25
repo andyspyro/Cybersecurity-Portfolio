@@ -35,9 +35,9 @@ Static analysis with Semgrep and SonarQube Cloud, local SQL injection testing, T
 
 ### Web Application Reverse Engineering with REA
 
-Used REA with PowerShell and Chrome DevTools Protocol to inspect browser-delivered JavaScript on a test application and Wikipedia. The recorded Wikipedia analysis parsed 7 scripts, visited 177,115 AST nodes, and reported no parser errors. Documented configuration and routing references, low-confidence endpoint classifications, and the limits of partial static analysis without claiming an exploit or verified network effects.
+Used REA, PowerShell, Chrome DevTools Protocol, and Codex for browser-based JavaScript reverse engineering. Examined a practice app and Wikipedia, then investigated YouTube's player controls and mid-roll advertising implementation. The YouTube source investigation reported 34 checked anchors for cue timing, possible ad prefetch, ad layouts, and conditional content restoration; server-side selection and live end-to-end mid-roll execution remain unverified.
 
-[Reverse engineering case study](https://github.com/andyspyro/Cybersecurity-Portfolio/tree/main/projects/rea-web-javascript-reverse-engineering)
+[Reverse engineering project](https://github.com/andyspyro/Cybersecurity-Portfolio/tree/main/projects/rea-web-javascript-reverse-engineering) · [YouTube mid-roll investigation](https://github.com/andyspyro/Cybersecurity-Portfolio/blob/main/projects/rea-web-javascript-reverse-engineering/youtube-midroll-ad-insertion.md)
 
 ### Digital Image Forensics and Photo Provenance
 
