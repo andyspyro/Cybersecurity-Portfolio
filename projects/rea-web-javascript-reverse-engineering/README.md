@@ -3,8 +3,8 @@
 **Project type:** Client-side JavaScript reverse engineering and browser reconnaissance  
 **Date:** October 25, 2026  
 **Tools:** [REA (Reverse Engineer Anything)](https://github.com/morluto/rea), PowerShell, Node.js/npm, Chromium/Chrome DevTools Protocol (CDP), JSON  
-**Targets:** REA's Notes demonstration page; a public English Wikipedia article, *Zero Time Dilemma*  
-**Status:** Static analysis completed; end-to-end event-handler tracing and network-behavior validation remain future work.
+**Targets:** REA's Notes demonstration page; a public English Wikipedia article (*Zero Time Dilemma*); YouTube's web video player and mid-roll advertising-related JavaScript  
+**Status:** Static analyses and AI-assisted player source investigation documented. Live end-to-end ad interruption and server-side ad selection remain unverified.
 
 ## Objective
 
@@ -40,6 +40,14 @@ Learn a repeatable method for observing a browser application and inspecting del
 - `ve-docstate` and `ve-dochtml` — session-storage-related editor state keys in static references.
 
 REA classified many of these strings as **low-confidence endpoint candidates**. That label does **not** make them HTTP endpoints. Most examples above are configuration keys, cookie names, or storage keys, and the reported detector often described an `unverified-network-receiver`.
+
+## YouTube player and mid-roll advertising investigation
+
+[**Read the YouTube mid-roll case study**](youtube-midroll-ad-insertion.md)
+
+Extended this work to the YouTube web player using REA, Chrome DevTools and Codex. The investigation traced a Play/Pause listener and advertising-related JavaScript, then reported **34 checked source anchors** concerning timed cue ranges, ad request/prefetch opportunities, conventional ad layouts, slot exits and conditional restoration of content. The mid-roll investigation is summarized from a local Codex report; the original full report and all source anchors have not been uploaded to this repository.
+
+The key engineering distinction is that **an ad slot, a request for an ad, and an actual interruption are three different events**. The player-source code can show how an interruption is prepared and ended, but it cannot reveal Google's private ad-selection algorithm or prove a specific ad played without a correlated runtime capture.
 
 ## Reproduction outline (Windows)
 
